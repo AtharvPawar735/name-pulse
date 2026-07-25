@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Pulse | Web Auditor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>Page Pulse</h1>
+            <p>Audit any URL for key SEO and performance metrics.</p>
+        </header>
+
+        <section class="input-section">
+            <input type="url" id="urlInput" placeholder="https://example.com" required>
+            <button id="scanBtn">Scan Page</button>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Auditing website...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorContainer" class="error-box hidden">
+            <p id="errorMessage"></p>
+        </div>
+
+        <!-- Results State -->
+        <div id="resultsContainer" class="hidden">
+            <h2>Audit Report</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>HTTP Status</h3>
+                    <p id="resStatus" class="highlight">--</p>
+                </div>
+                <div class="card">
+                    <h3>Response Time</h3>
+                    <p id="resTime">--</p>
+                </div>
+                <div class="card">
+                    <h3>H1 Count</h3>
+                    <p id="resH1">--</p>
+                </div>
+                <div class="card">
+                    <h3>Images Missing Alt</h3>
+                    <p id="resImages">--</p>
+                </div>
+                <div class="card">
+                    <h3>Approx. Word Count</h3>
+                    <p id="resWords">--</p>
+                </div>
+            </div>
+            
+            <div class="card full-width">
+                <h3>Page Title</h3>
+                <p id="resTitle">--</p>
+            </div>
+            <div class="card full-width">
+                <h3>Meta Description</h3>
+                <p id="resMeta">--</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- MANDATORY FOOTER -->
+    <footer>
+        <a href="https://digitalheroesco.com" target="_blank" rel="noopener noreferrer">
+            Built for Digital Heroes Training Task
+        </a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
